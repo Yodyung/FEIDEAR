@@ -218,10 +218,24 @@
             </div>
             <div class="nav-right-content">
                 <ul>
+                <!-- 로그인 하기 전이면 로그인 창 먼저 띄워서 마이페이지 못들어가게 하기! -->
+                <!-- 
+                	<c:if test="${sessionScope.loginId==null}">
+                	<li class="notification">
+                                <a class="signUp-btn" href="#">
+                                    MY PAGE
+                                </a>
+                            </li>
+                	</c:if>
+                	<c:if test="${sessionScope.loginId!=null}">
                     <li><a href="user-profile">MY PAGE</a>
                     </li>
+                	</c:if>
+                 -->
+                    <li><a href="user-profile">MY PAGE</a>
+                    </li>           
                     <li class="pr-0">
-                        <a class="btn btn-yellow" href="tour-details">축제 캘린더<i class="fa fa-paper-plane"></i></a>
+                        <a class="btn btn-yellow" href="calendar">축제 캘린더<i class="fa fa-paper-plane"></i></a>
                     </li>
                 </ul>
             </div>

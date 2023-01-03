@@ -47,52 +47,18 @@
 
     <!-- Custom styling plus plugins -->
     <link href="<%=pjName%>/resources/assets/admin/build/css/custom.min.css" rel="stylesheet">
+
+	<!-- 캘린더 css 손본거 플러그인 -->
+    <link href="<%=pjName%>/resources/assets/admin/css/calander.css" rel="stylesheet">
   </head>
 
   <body >
     <div class="container body">
       <div class="main_container">
-      
-      
+          
     <!-- navbar area start -->
-    <div class="top-navbar">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 topbar-contact-wrap">
-                    <div class="topbar-contact">
-                        <i class="fa fa-phone"></i>
-                        <span class="title">Support:</span>
-                        <span class="number">010 2801 7389</span>
-                    </div>
-                    <ul class="social-icon">
-                        <li>
-                            <a class="facebook" href="#" target="_blank"><i class="fa fa-facebook  "></i></a>
-                        </li>
-                        <li>
-                            <a class="twitter" href="#" target="_blank"><i class="fa fa-twitter  "></i></a>
-                        </li>
-                        <li>
-                            <a class="pinterest" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <div class="nav-right-content float-right">
-                        <ul class="pl-0">
 
-
-                            <li class="notification">
-                                <a class="signUp-btn" href="#">
-                                    <i class="fa fa-user-o"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar navbar-area navbar-expand-lg nav-style-03">
+    <nav class="navbar navbar-area navbar-expand-lg">
         <div class="container nav-container">
             <div class="responsive-mobile-menu">
                 <div class="mobile-logo">
@@ -185,7 +151,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>&nbsp; 축제 달력 <small>Click to add/edit events</small></h3>
+                <h3>&nbsp; 축제 달력 &nbsp;<small>클릭 시 상세정보가 보여요!</small></h3>
               </div>
 
             </div>
@@ -196,8 +162,10 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>축제 일정 <small>calender</small></h2>
+                    <h2>일정 안내</h2>
                     <ul class="nav navbar-right panel_toolbox">
+                    
+                    <!-- 딱히 안쓰기 때문에 주석 처리
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
                       <li class="dropdown">
@@ -206,9 +174,11 @@
                             <a class="dropdown-item" href="#">Settings 1</a>
                             <a class="dropdown-item" href="#">Settings 2</a>
                           </div>
+                          
                       </li>
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
+                     -->
                     </ul>
                     <div class="clearfix"></div>
                   </div>
@@ -254,9 +224,13 @@
               </form>
             </div>
           </div>
+          
+          <!-- 캘린더 상세보기 모달창 로그인 아이디 admin 아니면 수정 불가하게 막기 -->
           <div class="modal-footer">
             <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
+            <c:if test='${sessionScope.loginId!="admin"}'>
             <button type="button" class="btn btn-primary antosubmit">Save changes</button>
+            </c:if>
           </div>
         </div>
       </div>
@@ -290,7 +264,10 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
+          <!-- 캘린더 상세보기 모달창 로그인 아이디 admin 아니면 수정 불가하게 막기 -->
+			<c:if test='${sessionScope.loginId!="admin"}'>
             <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+			</c:if>
           </div>
         </div>
       </div>
@@ -311,10 +288,20 @@
     <!-- FullCalendar -->
     <script src="<%=pjName%>/resources/assets/admin/vendors/moment/min/moment.min.js"></script>
     <script src="<%=pjName%>/resources/assets/admin/vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="<%=pjName%>/resources/assets/admin/vendors/fullcalendar/dist/lang-all.js"></script>
 
     <!-- Custom Theme Scripts -->
     <script src="<%=pjName%>/resources/assets/admin/build/js/custom.min.js"></script>
     
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+        	locale: "ko"
+        }
+    }
+    </script>
 
   </body>
 </html>
