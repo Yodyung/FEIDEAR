@@ -130,7 +130,6 @@ p {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  margin-top: 5px;
   margin-bottom: 10px; }
 
 a {
@@ -564,7 +563,6 @@ ul {
   height: 52px;
   line-height: 52px;
   padding: 0 30px;
-  border: none;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -714,7 +712,7 @@ ul {
   border-bottom: 1px dashed #CFD3DE; }
 
 .mg-top--70 {
-  margin-top: 70px !important; }
+  margin-top: -70px !important; }
 
 /* -----------------------------------------------------
     default style
@@ -897,7 +895,7 @@ ul {
     color: var(--main-color-two); }
   .social-icon.style-three li a {
     border: 2px solid #EAEAEA;
-    color: #4f81bd;; }
+    color: #01B9B7; }
 
 .tp-slider-extra {
   -webkit-transition: all 0.3s ease;
@@ -3244,8 +3242,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       border-radius: 10px; }
     .single-blog .thumb .tag {
       position: absolute;
-      left: 12px;	
-      top: 10px; }
+      left: 20px;
+      top: 21px; }
   .single-blog .single-blog-details {
     padding: 20px 0 10px 0; }
     .single-blog .single-blog-details .title {
@@ -3256,16 +3254,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     .single-blog .single-blog-details .btn {
       margin-top: 13px; }
   .single-blog .tag {
-    background: #F8F8F8;
+    background: #01B9B7;
     padding: 0 6px 0 7px;
     height: 25px;
     line-height: 25px;
-    color: #6A5F5F;
-    font-weight: bold;
+    color: #ffffff;
     font-size: 14px;
     border-radius: 2px; }
   .single-blog .author {
-    color: #4f81bd;
+    color: #01B9B7;
     font-weight: 500;
     margin-bottom: 0;
     position: relative;
@@ -3416,7 +3413,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   min-width: 115px; }
 
 .single-blog-post-tags a {
-  background: #F0B153;
+  background: #01B9B7;
   padding: 0 6px 0 7px;
   height: 25px;
   line-height: 25px;
@@ -3480,7 +3477,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    border: 2px solid #4f81bd; }
+    border: 2px solid #01B9B7; }
   .author-area .media-body {
     margin-left: 30px; }
     .author-area .media-body h4 {
@@ -5464,16 +5461,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .single-input-wrap.style-two.select-style-two {
     background: #F8F8F8 !important; }
 
-/* 한솔 추가  */
-#search-file {
-	width: 100px;
-	height: 40px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-	align-content: space-around;
-}
-
 .contact-info {
   padding: 45px 30px; }
   .contact-info p {
@@ -5510,7 +5497,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   display: inline-block; }
 
 .about_us_widget p {
-  margin-bottom: 5px; }
+  margin-bottom: 30px; }
 
 .about_us_widget .social-icon li:first-child {
   margin-left: 0; }
@@ -5618,30 +5605,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     height: 3px;
     background: var(--main-color-one); }
 
-/* 한솔 추가 (나의 일기 쓰러 가기_버튼) */
-
-    .write-form{
-      position: relative;
-      background: #6BABF0;
-      border-radius: px; }
-
-    .write-form button{
-    letter-spacing: 0.3px;
-      color: #6A5F5F;
-      width: 100%;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      background: transparent;
-      background-color: #F8F8F8;
-      padding: 0 0px;
-      height: 50px;
-      line-height: 5px;
-      border-radius: 10px;
-    }
-
-
-
 .search-form {
   position: relative;
   background: #F8F8F8;
@@ -5717,45 +5680,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     transition: all 0.5s ease;
     border-bottom: 1px solid #E9E9E9;
     padding: 4px 37px;
-    text-align: left;
+    text-align: right;
     overflow: hidden; }
-
-    /* 한솔 추가 */
-    #select-category select{
-    width: 350px;
-    height: 40px; 
-    border: 5px;
-    }  
-    #select-category input{
-      width: 250px;
-    height: 40px; 
-    border: 5px;
-    }
-    #select-category button{
-    height: 40px; 
-    border: 5px;
-    text-align: center;
-    vertical-align: middle;
-    }
-    /* 한솔 추가 ( 일대일 문의에 분류 드롭다운_회원 / 축제 ) */
-    select.select-category{
-    width: 200px;
-    height: 40px;
-    border-radius: 5px;
-    }
-
-    #select-category h2 ul li{
-      list-style: none;
-      color: var(--main-color-two);
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      border-bottom: 0px solid #E9E9E9;
-      padding: 4px 37px;
-      text-align: left;
-      overflow: hidden; }
-
     .widget_categories ul li a {
       float: left; }
     .widget_categories ul li:hover {
@@ -6276,7 +6202,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /*---------------------------------------
     ## Back Top
 ---------------------------------------*/
-
 .back-to-top {
   position: fixed;
   right: 30px;
@@ -6294,45 +6219,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   display: none; }
-  
-  .back-to-top2 {
-  position: fixed;
-  top: 405px;
-  right: 30px;
-  bottom: 30px;
-  width: 55px;
-  height: 55px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  z-index: 99;
-  font-size: 25px;
-  cursor: pointer;
-  display: none; }
-  
-    .back-to-top3 {
-  position: fixed;
-  top: 485px;
-  right: 30px;
-  bottom: 30px;
-  width: 55px;
-  height: 55px;
-  color: #000000;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  z-index: 99;
-  font-size: 25px;
-  cursor: pointer;
-  display: none; }
-  
-  .btn-yellow2 {
-  background: var(--main-color-one);
-  left: 10px;
-  color: #ffffff;
-  right: 30px;
-  top: 30px;}
 
 .about_us_widget p,
 .widget-contact p span,

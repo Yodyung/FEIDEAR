@@ -11140,15 +11140,15 @@ Calendar.defaults = {
 	// locale
 	isRTL: false,
 	buttonText: {
-		prev: "전",
-		next: "다음",
+		prev: "prev",
+		next: "next",
 		prevYear: "prev year",
 		nextYear: "next year",
 		year: 'year', // TODO: locale files need to specify this
-		today: '오늘',
-		month: '월별',
-		week: '주별',
-		day: '일별'
+		today: 'today',
+		month: 'month',
+		week: 'week',
+		day: 'day'
 	},
 
 	buttonIcons: {
@@ -11410,13 +11410,13 @@ function populateInstanceComputableOptions(options) {
 
 // Returns moment's internal locale data. If doesn't exist, returns English.
 function getMomentLocaleData(localeCode) {
-	return moment.localeData(localeCode) || moment.localeData('ko');
+	return moment.localeData(localeCode) || moment.localeData('en');
 }
 
 
 // Initialize English by forcing computation of moment-derived options.
 // Also, sets it as the default.
-FC.locale('ko', Calendar.englishDefaults);
+FC.locale('en', Calendar.englishDefaults);
 
 ;;
 
@@ -14161,7 +14161,7 @@ fcViews.list = {
 	'class': ListView,
 	buttonTextKey: 'list', // what to lookup in locale files
 	defaults: {
-		buttonText: '리스트', // text to display for English
+		buttonText: 'list', // text to display for English
 		listDayFormat: 'LL', // like "January 1, 2016"
 		noEventsMessage: 'No events to display'
 	}

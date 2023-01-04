@@ -45,7 +45,7 @@
     </div>
     <!-- preloader area end -->
 
-    <!-- //. sign up Popup -->
+    <!-- //. login Popup -->
     <div class="signUp-popup login-register-popup" id="signUp-popup">
         <div class="login-register-popup-wrap">
             <div class="row no-gutters">
@@ -59,14 +59,10 @@
                         <img src="<%=pjName%>/resources/assets/images/others/signup-shape.png" alt="img">
                     </div>
                     <form class="login-form-wrap">
-                        <h4 class="text-center">Sign Up</h4>
+                        <h4 class="text-center">Log In</h4>
                         <div class="single-input-wrap style-two">
-                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="ID">
                             <span class="single-input-title"><i class="fa fa-user"></i></span>
-                        </div>
-                        <div class="single-input-wrap style-two">
-                            <input type="text" placeholder="Email">
-                            <span class="single-input-title"><i class="fa fa-envelope"></i></span>
                         </div>
                         <div class="single-input-wrap style-two">
                             <input type="text" placeholder="Password">
@@ -77,9 +73,9 @@
                             <span>Remember me</span>
                         </label>
                         <div class="single-input-wrap style-two">
-                            <button class="btn btn-yellow w-100">Sign Up</button>
+                            <button class="btn btn-yellow w-100">로그인</button>
                         </div>
-                        <div class="sign-in-btn">I already have an account. <a href="#">Sign In</a></div> 
+                        <div class="sign-in-btn">페이디어 계정이 없어요 ☞ <a href="sign-up2">회원가입</a></div> 
                         <div class="social-wrap">
                             <p>Or Continue With</p>
                             <ul class="social-icon">
@@ -88,9 +84,6 @@
                                 </li>
                                 <li>
                                     <a class="twitter" href="#" target="_blank"><i class="fa fa-twitter  "></i></a>
-                                </li>
-                                <li>
-                                    <a class="pinterest" href="#" target="_blank"><i class="fa fa-pinterest"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -102,7 +95,44 @@
     <!-- //. sign up Popup End -->
 
     <!-- navbar area start -->
-    <nav class="navbar navbar-area navbar-expand-lg nav-style-01">
+    <div class="top-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 topbar-contact-wrap">
+                    <div class="topbar-contact">
+                        <i class="fa fa-phone"></i>
+                        <span class="title">Support :</span>
+                        <span class="number">02 1234 5678</span>
+                    </div>
+                    <ul class="social-icon">
+                        <li>
+                            <a class="facebook" href="#" target="_blank"><i class="fa fa-facebook  "></i></a>
+                        </li>
+                        <li>
+                            <a class="twitter" href="#" target="_blank"><i class="fa fa-twitter  "></i></a>
+                        </li>
+                        <li>
+                            <a class="pinterest" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="nav-right-content float-right">
+                        <ul class="pl-0">
+
+
+                            <li class="notification">
+                                <a class="signUp-btn" href="#">
+                                    <i class="fa fa-user-o"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-area navbar-expand-lg nav-style-03">
         <div class="container nav-container">
             <div class="responsive-mobile-menu">
                 <div class="mobile-logo">
@@ -142,37 +172,41 @@
                     </a>
                 </div>
                 <ul class="navbar-nav">
-                    <li>
-                        <a href="tour-list">축제</a>
-                    </li>
                     <li class="menu-item-has-children">
-                        <a href="#">커뮤니티</a>
+                        <a>축제 둘러보기</a>
                         <ul class="sub-menu">
-                            <li><a href="blog-details02">축제일기</a></li>
-                            <li><a href="blog02">매거진</a></li>
-                            <li><a href="blog-details">매거진 상세</a></li>
+                            <li><a href="tour-list">축제 정보</a></li>
+                            <li><a href="tour-list">근처 맛집</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#">이벤트</a>
+                        <a>커뮤니티</a>
+                        <ul class="sub-menu">
+                            <li><a href="blog04">축제 일기</a></li>
+                            <li><a href="blog02">매거진</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a>이벤트</a>
                         <ul class="sub-menu">
                             <li><a href="blog03">제휴 이벤트</a></li>
                       		<li><a href="destination-details">서포터즈</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#">스마트 PAGE</a>
+                        <a>스마트 페이지</a>
                         <ul class="sub-menu">
-                            <li><a href="user-profile">MY 여행성향 분석</a></li>
-                      		<li><a href="user-profile">실시간 날씨</a></li>
-                      		<li><a href="user-profile">혼잡도 체크</a></li>
+                            <li><a href="smart-page">MY 여행성향 분석</a></li>
+                      		<li><a href="smart-page">실시간 날씨</a></li>
+                      		<li><a href="smart-page">혼잡도 체크</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="faq">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="contact">1:1문의</a>
+                    <li class="menu-item-has-children">
+                        <a>문의사항</a>
+                        <ul class="sub-menu">
+                            <li><a href="faq">FAQ</a></li>
+                            <li><a href="contact">1:1 문의</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -181,7 +215,7 @@
                     <li><a href="user-profile">MY PAGE</a>
                     </li>
                     <li class="pr-0">
-                        <a class="btn btn-yellow" href="tour-details">축제 캘린더<i class="fa fa-paper-plane"></i></a>
+                        <a class="btn btn-yellow" href="calendar">축제 캘린더<i class="fa fa-paper-plane"></i></a>
                     </li>
                 </ul>
             </div>
@@ -336,86 +370,89 @@
     <!-- newslatter area End -->
     
     <!-- footer area start -->
-    <footer class="footer-area" style="background-image: url(<%=pjName%>/resources/assets/images/bg/2.png);">
+    <footer class="footer-area style-three" style="background-image: url(<%=pjName%>/resources/assets/images/bg/2.png);">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget widget">
-                        <div class="about_us_widget">
-                            <a href="index" class="footer-logo"> 
-                                <img src="<%=pjName%>/resources/assets/images/logo.png" alt="footer logo">
-                            </a>
-                            <p>We believe brand interaction is key in commu- nication. Real innovations and a positive customer experience are the heart of successful communication.</p>
-                            <ul class="social-icon">
-                                <li>
-                                    <a class="facebook" href="#" target="_blank"><i class="fa fa-facebook  "></i></a>
-                                </li>
-                                <li>
-                                    <a class="twitter" href="#" target="_blank"><i class="fa fa-twitter  "></i></a>
-                                </li>
-                                <li>
-                                    <a class="pinterest" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-                                </li>
-                            </ul>
-                       </div>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="about_us_widget text-center">
+                        <a href="index" class="footer-logo"> 
+                            <img src="<%=pjName%>/resources/assets/images/logo.png" alt="footerlogo">
+                        </a><br><br><br>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget widget ">
-                        <div class="widget-contact">
-                            <h4 class="widget-title">Contact us</h4>
-                            <p>
-                                <i class="fa fa-map-marker"></i> 
-                                <span>Manama Tower, Badda Link Road, Badda Dhaka, Bangladesh</span>
-                            </p>
-                            <p class="location"> 
-                                <i class="fa fa-envelope-o"></i>
-                                <span>travelpoint@gmail.com</span>
-                            </p>
-                            <p class="telephone">
+                    <div class="footer-widget widget text-center">
+                        <ul class="widget_nav_menu text-center">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="tour-list">Festival</a></li>
+                            <li><a href="blog04">Community</a></li>
+                            <li><a href="blog03">Events</a></li>
+                            <li><a href="faq">FAQ</a></li>
+                            <li><a href="contact">Q&A</a></li>
+                        </ul>
+                    </div>  
+                </div>  
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="footer-widget widget text-center">
+                        <div class="widget-contact d-inline-flex">
+                            <p class="telephone text-left">
                                 <i class="fa fa-phone base-color"></i> 
                                 <span>
-                                    +088 012121240
-                                </span>
+                                    02 1234 5678
+                                </span>		
+                            </p>
+                            <p class="location text-left"> 
+                                <i class="fa fa-envelope-o"></i>
+                                <span>feidear@kosmo.com</span>
+                            </p>
+                            <p class="text-left">
+                                <i class="fa fa-map-marker"></i> 
+                                <span>서울특별시 금천구 가산디지털2로<br> 한라원앤원타워 308호</span>
+                            </p>
+                            <p class="text-left">
+                                <i class="fa fa-paper-plane"></i> 
+                                <span><a href="#">Support</a></span>
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget widget">
-                        <h4 class="widget-title">Quick Link</h4>
-                        <ul class="widget_nav_menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Destination</a></li>
-                            <li><a href="#">Tours</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget widget">
-                        <h4 class="widget-title">Instagram Gallery</h4>
-                        <ul class="widget-instagram-feed">
-                            <li><a href="#"><img src="<%=pjName%>/resources/assets/images/instagram/1.png" alt="img"></a></li>
-                            <li><a href="#"><img src="<%=pjName%>/resources/assets/images/instagram/2.png" alt="img"></a></li>
-                            <li><a href="#"><img src="<%=pjName%>/resources/assets/images/instagram/3.png" alt="img"></a></li>
-                            <li><a href="#"><img src="<%=pjName%>/resources/assets/images/instagram/4.png" alt="img"></a></li>
-                            <li><a href="#"><img src="<%=pjName%>/resources/assets/images/instagram/5.png" alt="img"></a></li>
-                            <li><a href="#"><img src="<%=pjName%>/resources/assets/images/instagram/6.png" alt="img"></a></li>
-                        </ul>
+                </div> 
+                <div class="col-lg-5">
+                    <div class="widget input-group newslatter-wrap style-two">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-yellow" type="button">Subscribe</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="copyright-inner">
-            <div class="copyright-text">
-                &copy; Viaje 2019 All rights reserved. Powered with <a href="http://zwin.io/" target="_blank"><i class="fa fa-heart"></i> </a> by <a href="http://zwin.io/" target="_blank"><span>Zwin.</span></a>
+        <div class="copyright-inner border-tp-solid">
+            <div class="container">
+                <div class="copyright-text text-center">
+                    &copy; Feidear 2022 All rights reserved. Powered with <a href="#" target="_blank"><i class="fa fa-heart"></i> </a> by <a href="#" target="_blank"><span>Feidear.</span></a>
+                </div>
             </div>
         </div>
     </footer>
     <!-- footer area end -->
+    
+	<!-- mini-menu (right section) area start -->
+    <div class="back-to-top2" style="display: block;">
+        <span class="back-top">
+			<a href="contact"><img src="<%=pjName%>/resources/assets/images/chatbot_smile.png"></a>
+		</span>
+    </div>
+    
+    <div class="back-to-top3" style="display: block;">
+        <span class="back-top">
+			<a href="tour-list"><img src="<%=pjName%>/resources/assets/images/heart.png"></a>
+		</span>
+    </div>
+    
+    <!-- mini-menu area end -->
 
     <!-- back to top area start -->
     <div class="back-to-top">

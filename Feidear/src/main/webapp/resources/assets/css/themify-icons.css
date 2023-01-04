@@ -73,6 +73,8 @@
 }
 .ti-search:before {
 	content: "\e610";
+	display: flex;
+    justify-content: center;
 }
 .ti-zoom-in:before {
 	content: "\e611";

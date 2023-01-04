@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>축제 캘린더</title>
+    <title>Feidear</title>
     
     <!-- favicon -->
     <link rel=icon href="<%=pjName%>/resources/assets/images/favicon.png" sizes="20x20" type="image/png">
@@ -135,9 +135,6 @@
             <div class="nav-right-content">
                 <ul>
                     <li><a href="user-profile" style="color:white;">MY PAGE</a>
-                    </li>
-                    <li class="pr-0">
-                        <a class="btn btn-yellow" href="tour-details" style="color:white;">축제 캘린더<i class="fa fa-paper-plane"></i></a>
                     </li>
                 </ul>
             </div>

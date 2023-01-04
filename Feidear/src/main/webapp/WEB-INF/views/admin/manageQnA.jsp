@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%String pjName = "/Feidear";%>
+<%
+	String pjName = "/Feidear";
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +16,7 @@
 	href="<%=pjName%>/resources/assets/admin/images/favicon.ico"
 	type="image/ico" />
 
-<title>FeiDear Admin | 커뮤니티 관리</title>
+<title>FeiDear Admin | 문의사항 관리</title>
 
 <!-- Bootstrap -->
 <link
@@ -82,7 +84,7 @@ a {
 	<div class="container body">
 		<div class="main_container">
 
-			<!-- 사이드 바 시작 -->
+			<!-- 사이드바 메뉴 시작 -->
 			<div class="col-md-3 left_col">
 				<div class="left_col scroll-view">
 
@@ -100,7 +102,7 @@ a {
 						class="main_menu_side hidden-print main_menu">
 						<div class="menu_section">
 							<ul class="nav side-menu">
-								<li><a href="javascript:void(0)"><i
+								<li><a href="../index"><i
 										class="fa fa-arrow-circle-right" aria-hidden="true"></i>사용자
 										페이지 이동</a></li>
 								<li><a><i class="fa fa-trophy"></i>축제 관리<span
@@ -111,20 +113,22 @@ a {
 									</ul></li>
 								<li><a href="manageUsers"><i class="fa fa-users"></i>회원
 										관리</a></li>
-								<li class="active"><a href="communityAdmin"><i
-										class="fa fa-comments"></i>커뮤니티 관리</a></li>
-								<li><a href="manageQnA"><i
+								<li><a href="communityAdmin"><i class="fa fa-comments"></i>커뮤니티
+										관리</a></li>
+										<li class="active"><a href="manageQnA"><i
 										class="fa fa-question-circle"></i>문의사항 관리</a></li>
 								<li><a href="javascript:void(0)"><i
 										class="fa fa-calendar-check-o"></i>이벤트 관리</a></li>
 
 							</ul>
 						</div>
+
+
 					</div>
 					<!-- /sidebar menu -->
 				</div>
 			</div>
-			<!-- 사이드 바 끝 -->
+			<!-- 사이드바 메뉴 끝 -->
 
 
 			<!-- 상단바 시작 -->
@@ -213,60 +217,48 @@ a {
 				<div class="row"
 					style="width: 80%; margin: 0px auto; margin-top: 10%; text-align: center;">
 					<div class="col-md-12 col-sm-12 ">
-
+						<h2
+							style="margin: 20px auto; font-size: 32px; font-weight: bolder; white-space: nowrap;">문의사항
+							목록 보기</h2>
 						<!-- 탭 -->
 						<div class="table-responsive">
 							<ul class="nav nav-tabs bar_tabs" id="myTab" role="tablist">
 								<li class="nav-item"><a class="nav-link active"
 									id="sReview-tab" data-toggle="tab" href="#sReview" role="tab"
-									aria-controls="sReview" aria-selected="true">간편 리뷰</a></li>
+									aria-controls="sReview" aria-selected="true">전체</a></li>
 								<li class="nav-item"><a class="nav-link"
 									id="fstvReview-tab" data-toggle="tab" href="#fstvReview"
-									role="tab" aria-controls="fstvReview" aria-selected="false">축제
-										일기</a></li>
+									role="tab" aria-controls="fstvReview" aria-selected="false">회원</a></li>
 								<li class="nav-item"><a class="nav-link" id="contact-tab"
 									data-toggle="tab" href="#contact" role="tab"
-									aria-controls="contact" aria-selected="false">매거진</a></li>
+									aria-controls="contact" aria-selected="false">축제</a></li>
 							</ul>
 						</div>
 						<div class="tab-content" id="myTabContent">
 
-							<!-- 간편리뷰 테이블 -->
+							<!-- 전체 목록 보기 테이블 -->
 							<div class="tab-pane fade show active" id="sReview"
 								role="tabpanel" aria-labelledby="home-tab">
-								<h2
-									style="margin: 20px auto; font-size: 32px; font-weight: bolder; white-space: nowrap;">간편
-									리뷰</h2>
 								<div class="table-responsive">
 									<table class="table" id="sReviewTbl"
 										style="font-size: 1vw; white-space: nowrap;">
 										<thead>
 											<tr>
-												<th colspan="2"
-													style="text-align: center; border-bottom: none; color: gray; white-space: nowrap; font-size: 1.25vw">
-													간편리뷰</th>
-												<th colspan="2"
-													style="text-align: center; border-bottom: none; color: gray; white-space: nowrap; font-size: 1.25vw">
-													공개여부</th>
-											</tr>
-											<tr>
 												<th class="column-title"
-													style="text-align: center; border-top: none;">축제 이름</th>
+													style="text-align: center; border-top: none;">문의 번호</th>
 												<th class="column-title"
-													style="text-align: center; border-top: none;">리뷰 내용</th>
+													style="text-align: center; border-top: none;">제목</th>
 												<th class="column-title"
-													style="text-align: center; border-top: none;">공개</th>
+													style="text-align: center; border-top: none;">작성일</th>
 												<th class="column-title"
-													style="text-align: center; border-top: none;">비공개</th>
+													style="text-align: center; border-top: none;">상태</th>
 											</tr>
 										</thead>
 										<tbody>
 											<!-- 테이블 데이터 출력 -->
-											<!-- radio 버튼의 name을 tr 마다 다르게 둘 것 -->
 											<tr>
-												<td class=" "><a href="#">1121000040</a></td>
-												<td class=" "><a href="#">May 23, 2014 11:47:56 PM
-												</a></td>
+												<td class=" ">1312</td>
+												<td class=" "><a href="#">제 아이디가 이상해요 어떻게 된 건가요</a></td>
 												<td class="a-center" style="text-align: center"><input
 													type="radio" class="flat" name="table_records1"></td>
 												<td class="a-center" style="text-align: center"><input
